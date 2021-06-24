@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-cn" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>database_interface_base module &mdash; DataAPI 1.0 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="database_interface_realization module" href="database_interface_realization.html" />
+    <link rel="prev" title="composite_mode_realization module" href="composite_mode_realization.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> DataAPI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">code</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="assist_base.html">assist_base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="builder_mode_base.html">builder_mode_base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="builder_mode_realization.html">builder_mode_realization module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composite_mode_base.html">composite_mode_base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composite_mode_realization.html">composite_mode_realization module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">database_interface_base module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">模块介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">功能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="database_interface_realization.html">database_interface_realization module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DataAPI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">code</a> &raquo;</li>
+        
+      <li>database_interface_base module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/database_interface_base.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-database_interface_base">
+<span id="database-interface-base-module"></span><h1>database_interface_base module<a class="headerlink" href="#module-database_interface_base" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>模块介绍<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p>这是一个数据库API基础操作类，利用构建者模式和组合模式创造的几个功能组件实现一系列的数据库的操作</p>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2>功能<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p>主要技术：</p>
+<blockquote>
+<div><p>（1）初始化中执行部分构建操作，如authority</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）初始化即登录数据库</p>
+<p>（2）退出</p>
+<p>（3）调用存储过程查询</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>类说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<dl class="class">
+<dt id="database_interface_base.DataBaseAPI_base">
+<em class="property">class </em><code class="sig-prename descclassname">database_interface_base.</code><code class="sig-name descname">DataBaseAPI_base</code><span class="sig-paren">(</span><em class="sig-param">user</em>, <em class="sig-param">passwd</em>, <em class="sig-param">host</em>, <em class="sig-param">port</em>, <em class="sig-param">db</em>, <em class="sig-param">charset</em><span class="sig-paren">)</span><a class="headerlink" href="#database_interface_base.DataBaseAPI_base" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个数据库API基础操作类，利用构建者模式和组合模式创造的几个功能组件实现一系列的数据库的操作，目的是为了灵活配置各种操作</p>
+<blockquote>
+<div><p>主要功能：（1）初始化即登录数据库（2）退出（3）调用存储过程查询</p>
+</div></blockquote>
+</div></blockquote>
+<dl class="method">
+<dt id="database_interface_base.DataBaseAPI_base.authority">
+<code class="sig-name descname">authority</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#database_interface_base.DataBaseAPI_base.authority" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个创建数据连接和游标的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无参数</p>
+</dd>
+<dt>返回：</dt><dd><p>authority (Dict): 数据库连接connect,游标cursor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_interface_base.DataBaseAPI_base.exit">
+<code class="sig-name descname">exit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#database_interface_base.DataBaseAPI_base.exit" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个退出的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无参数</p>
+</dd>
+<dt>返回：</dt><dd><p>无返回</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_interface_base.DataBaseAPI_base.query">
+<code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">InputParameters_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#database_interface_base.DataBaseAPI_base.query" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个查询的函数，主要通过调用存储过程实现数据的查询</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>InputParameters_dict (Dict)：输入参(args：存储过程的参数，procname：存储过程名字)</p>
+</dd>
+<dt>返回：</dt><dd><p>data (DataFrame)：data查询的数据</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="database_interface_realization.html" class="btn btn-neutral float-right" title="database_interface_realization module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="composite_mode_realization.html" class="btn btn-neutral float-left" title="composite_mode_realization module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 2020, shihua
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Algorithm Monitoring
++ 简介
+该模块提供算法监控功能，使得算法可以动态运行，算法形成闭环
++ 主要技术
+（1）观察者模式和有限状态机
++ 安装
+```
+pip install -i http://10.3.110.71:8080 --trusted-host 10.3.110.71 ModelMonitoring
+```

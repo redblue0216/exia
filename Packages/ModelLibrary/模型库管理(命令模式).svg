@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="68cm" height="39cm" viewBox="-102 77 1352 766" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="-101" y="79" width="564.4" height="72"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-101" y="79" width="564.4" height="72"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="181.2" y="95">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="181.2" y="115">ModelManager</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="181.2" y="130.2">这是一个模型使用者类，主要集中模型</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="181.2" y="144.2">使用者的具体行为动作。</text>
+    <rect style="fill: #ffffff" x="-101" y="151" width="564.4" height="41"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-101" y="151" width="564.4" height="41"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-98" y="165">+ModelLibraryConnect: __init__ = create_ModelLibraryConnect(user,passwd)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-98" y="180.2">创建模型库连接对象</text>
+    <rect style="fill: #ffffff" x="-101" y="192" width="564.4" height="189"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-101" y="192" width="564.4" height="189"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-98" y="206">+create_ModelLibraryConnect(user:str,passwd:str): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-98" y="221.2">定义一个创建模型库连接对象的函数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-98" y="243">+write_model(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-98" y="258.2">定义一个写入模型的函数		</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-98" y="280">+read_model(): mehtod</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-98" y="295.2">定义一个读取模型的函数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-98" y="317">+list_model(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-98" y="332.2">定义一个列出模型的函数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-98" y="354">+query_model(): mehtod</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-98" y="369.2">定义一个查询模型的函数</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="737" y="78" width="279.5" height="72"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="737" y="78" width="279.5" height="72"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="876.75" y="94">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="876.75" y="114">ModelCommand_base</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="876.75" y="129.2">这是一个模型命令的基类，使用了命令</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="876.75" y="143.2">模式。</text>
+    <rect style="fill: #ffffff" x="737" y="150" width="279.5" height="41"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="737" y="150" width="279.5" height="41"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="740" y="164">+_manager: __init__ = manager</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="740" y="179.2">模型管理者对象</text>
+    <rect style="fill: #ffffff" x="737" y="191" width="279.5" height="78"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="737" y="191" width="279.5" height="78"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="740" y="205">+setManager(manager:object): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="740" y="220.2">定义一个设置模型管理者的函数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="740" y="242">+execute(): @abstracmethod</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="740" y="257.2">定义一个模型命令执行抽象函数</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1114.5" y="97" width="133.7" height="58"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1114.5" y="97" width="133.7" height="58"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1181.35" y="113">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1181.35" y="133">ABCMeta</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1181.35" y="148.2">这是一个Python抽象基类</text>
+    <rect style="fill: #ffffff" x="1114.5" y="155" width="133.7" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1114.5" y="155" width="133.7" height="8"/>
+    <rect style="fill: #ffffff" x="1114.5" y="163" width="133.7" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1114.5" y="163" width="133.7" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1014.5" y="421" width="217.6" height="86"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1014.5" y="421" width="217.6" height="86"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1123.3" y="437">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1123.3" y="457">ModelCommand_instance</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1123.3" y="472.2">这是一个模型命令的具体实例，主要将</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1123.3" y="486.2">ModelManager中的方法对</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1123.3" y="500.2">象化，便于后续扩展</text>
+    <rect style="fill: #ffffff" x="1014.5" y="507" width="217.6" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1014.5" y="507" width="217.6" height="8"/>
+    <rect style="fill: #ffffff" x="1014.5" y="515" width="217.6" height="41"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1014.5" y="515" width="217.6" height="41"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1017.5" y="529">+execute(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1017.5" y="544.2">定义一个模型命令实际执行的函数</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="526.502" y="407" width="302.6" height="72"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="526.502" y="407" width="302.6" height="72"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="677.802" y="423">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="677.802" y="443">MdoleCommand_macro</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="677.802" y="458.2">这是一个模型命令的具体实例，主要实</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="677.802" y="472.2">现一组命令，也可称之为宏命令。</text>
+    <rect style="fill: #ffffff" x="526.502" y="479" width="302.6" height="92"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="526.502" y="479" width="302.6" height="92"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="529.502" y="493">+manager: __init__</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="529.502" y="508.2">继承自ModelCommand中的</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="529.502" y="522.2">模型管理者对象</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="529.502" y="544">+__commands: __init__ = list</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="529.502" y="559.2">命令对象池</text>
+    <rect style="fill: #ffffff" x="526.502" y="571" width="302.6" height="115"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="526.502" y="571" width="302.6" height="115"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="529.502" y="585">+addCommand(command:object): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="529.502" y="600.2">定义一个添加模型命令对象的函数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="529.502" y="622">+removeCommand(command:object): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="529.502" y="637.2">定义一个删除模型命令对象的函数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="529.502" y="659">+excute_all(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="529.502" y="674.2">定义一个执行所有命令的函数</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="876.75,288.242 876.75,345.999 677.802,345.999 677.802,405.991 "/>
+    <polygon style="fill: #ffffff" points="884.75,288.242 876.75,272.242 868.75,288.242 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="884.75,288.242 876.75,272.242 868.75,288.242 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="876.75,288.242 876.75,352.999 1123.3,352.999 1123.3,419.992 "/>
+    <polygon style="fill: #ffffff" points="884.75,288.242 876.75,272.242 868.75,288.242 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="884.75,288.242 876.75,272.242 868.75,288.242 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1095.26,134 1057.5,134 1057.5,173.5 1017.51,173.5 "/>
+    <polygon style="fill: #ffffff" points="1095.26,142 1111.26,134 1095.26,126 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1095.26,142 1111.26,134 1095.26,126 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="988.324,488.5 914.803,488.5 914.803,546.5 830.111,546.5 "/>
+    <polygon style="fill: #ffffff" points="1013.5,488.5 999.495,493.3 985.495,488.5 999.495,483.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1013.5,488.5 999.495,493.3 985.495,488.5 999.495,483.7 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="916.803" y="514.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="981.495" y="485.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="834.111" y="543.5"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="500.321,546.5 487.951,546.5 487.951,230 464.409,230 "/>
+    <polygon style="fill: #ffffff" points="525.493,546.5 511.493,551.3 497.493,546.5 511.493,541.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="525.493,546.5 511.493,551.3 497.493,546.5 511.493,541.7 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="489.951" y="385.25"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="493.493" y="543.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="468.409" y="227"></text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="122.018" y="637" width="279.5" height="86"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="122.018" y="637" width="279.5" height="86"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="261.768" y="653">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="261.768" y="673">ModelInvoker</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="261.768" y="688.2">这是一个模型命令调度者类，主要用于</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="261.768" y="702.2">模型命令的使用与调度。一般只能加载</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="261.768" y="716.2">一个模型命令</text>
+    <rect style="fill: #ffffff" x="122.018" y="723" width="279.5" height="41"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="122.018" y="723" width="279.5" height="41"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="125.018" y="737">+__command: __init__ = None</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="125.018" y="752.2">需要使用的模型命令对象</text>
+    <rect style="fill: #ffffff" x="122.018" y="764" width="279.5" height="78"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="122.018" y="764" width="279.5" height="78"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="125.018" y="778">+setCommand(command:object): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="125.018" y="793.2">定义一个设置模型命令对象的函数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="125.018" y="815">+action(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="125.018" y="830.2">定义一个执行加载设置的模型命令</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="500.321,546.5 457.009,546.5 457.009,739.5 402.526,739.5 "/>
+    <polygon style="fill: #ffffff" points="525.493,546.5 511.493,551.3 497.493,546.5 511.493,541.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="525.493,546.5 511.493,551.3 497.493,546.5 511.493,541.7 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="459.009" y="640"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="493.493" y="543.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="406.526" y="736.5"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="988.331,488.5 915.018,488.5 915.018,739.5 402.523,739.5 "/>
+    <polygon style="fill: #ffffff" points="1013.5,488.5 999.503,493.3 985.503,488.5 999.503,483.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1013.5,488.5 999.503,493.3 985.503,488.5 999.503,483.7 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="917.018" y="611"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="981.503" y="485.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="406.523" y="736.5"></text>
+  </g>
+</svg>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="76cm" height="41cm" viewBox="59 98 1516 805" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="62" y="327" width="213.55" height="72"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="62" y="327" width="213.55" height="72"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="168.775" y="343">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="168.775" y="363">ServerManagerCommand</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="168.775" y="378.2">这是一个服务管理命令基础类，主要用</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="168.775" y="392.2">于抽象命令基类。</text>
+    <rect style="fill: #ffffff" x="62" y="399" width="213.55" height="41"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="62" y="399" width="213.55" height="41"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="65" y="413">+role: __init__ = object</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="65" y="428.2">标识实现何种功能的命令</text>
+    <rect style="fill: #ffffff" x="62" y="440" width="213.55" height="41"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="62" y="440" width="213.55" height="41"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="65" y="454">+execute(): abstractmethod</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="65" y="469.2">定义一个执行命令的抽象方法</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="347" y="156" width="155.6" height="58"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="347" y="156" width="155.6" height="58"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="424.8" y="172">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="424.8" y="192">CommandA</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="424.8" y="207.2">这是一个命令具体实现类</text>
+    <rect style="fill: #ffffff" x="347" y="214" width="155.6" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="347" y="214" width="155.6" height="8"/>
+    <rect style="fill: #ffffff" x="347" y="222" width="155.6" height="41"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="347" y="222" width="155.6" height="41"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="350" y="236">+execute(): mehtod</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="350" y="251.2">定义一个实现具体命令的方法</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="168.775,307.754 168.775,286.999 424.8,286.999 424.8,264.007 "/>
+    <polygon style="fill: #ffffff" points="160.775,307.754 168.775,323.754 176.775,307.754 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="160.775,307.754 168.775,323.754 176.775,307.754 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="197" y="623" width="302.6" height="72"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="197" y="623" width="302.6" height="72"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="348.3" y="639">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="348.3" y="659">MacroCommand</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="348.3" y="674.2">这是一个宏命令类，用来组合各种具体</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="348.3" y="688.2">命令</text>
+    <rect style="fill: #ffffff" x="197" y="695" width="302.6" height="78"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="197" y="695" width="302.6" height="78"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="200" y="709">+super: __init__ = object</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="724.2">用来继承命令基类</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="200" y="746">+__commands: __init__ = orderdict</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="761.2">命令存储数据结构，有序字典</text>
+    <rect style="fill: #ffffff" x="197" y="773" width="302.6" height="129"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="197" y="773" width="302.6" height="129"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="200" y="787">+addCommand(command:object): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="802.2">定义一个添加命令的方法</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="200" y="824">+removeCommand(command:object): mehtod</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="839.2">定义一个删除命令对象的方法</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="200" y="861">+execute(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="876.2">定义一个按照具体逻辑执行各个子命令</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="890.2">的方法</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="424.8,289.178 424.8,449.999 348.3,449.999 348.3,621.991 "/>
+    <polygon style="fill: #ffffff" points="424.8,264.007 429.6,278.007 424.8,292.007 420,278.007 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="424.8,264.007 429.6,278.007 424.8,292.007 420,278.007 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="386.55" y="446.999"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="435.8" y="276.007"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="352.3" y="617.991"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="168.775,500.246 168.775,560 348.3,560 348.3,621.991 "/>
+    <polygon style="fill: #ffffff" points="176.775,500.246 168.775,484.246 160.775,500.246 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="176.775,500.246 168.775,484.246 160.775,500.246 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="778" y="129" width="279.5" height="86"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="778" y="129" width="279.5" height="86"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="917.75" y="145">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="917.75" y="165">CommandInvoker</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="917.75" y="180.2">这是一个命令调度者类，主要用于调度</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="917.75" y="194.2">各种命令，组合各种逻辑命令实现一项</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="917.75" y="208.2">具体功能。</text>
+    <rect style="fill: #ffffff" x="778" y="215" width="279.5" height="41"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="778" y="215" width="279.5" height="41"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="781" y="229">+__command: __init__ = None</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="781" y="244.2">具体命令对象</text>
+    <rect style="fill: #ffffff" x="778" y="256" width="279.5" height="78"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="778" y="256" width="279.5" height="78"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="781" y="270">+setCommand(command:object): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="781" y="285.2">定义一个设置命令的方法</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="781" y="307">+action(): mehtod</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="781" y="322.2">定义一个执行具体命令对象的方法</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="528.781,209.5 647.301,209.5 647.301,231.5 776.991,231.5 "/>
+    <polygon style="fill: #ffffff" points="503.61,209.5 517.61,204.7 531.61,209.5 517.61,214.3 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="503.61,209.5 517.61,204.7 531.61,209.5 517.61,214.3 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="649.301" y="217.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="535.61" y="206.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="772.991" y="228.5"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="525.781,762.5 645.8,762.5 645.8,231.5 776.991,231.5 "/>
+    <polygon style="fill: #ffffff" points="500.609,762.5 514.609,757.7 528.609,762.5 514.609,767.3 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="500.609,762.5 514.609,757.7 528.609,762.5 514.609,767.3 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="647.8" y="494"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="532.609" y="759.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="772.991" y="228.5"></text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1186" y="546" width="387.3" height="72"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1186" y="546" width="387.3" height="72"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1379.65" y="562">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1379.65" y="582">CommandInterface</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1379.65" y="597.2">这是一个命令接口类，主要用于根据依</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1379.65" y="611.2">赖倒置原则实现功能和实现解耦。</text>
+    <rect style="fill: #ffffff" x="1186" y="618" width="387.3" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1186" y="618" width="387.3" height="8"/>
+    <rect style="fill: #ffffff" x="1186" y="626" width="387.3" height="41"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1186" y="626" width="387.3" height="41"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1189" y="640">+server_manage(method:str,parameter:dict): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1189" y="655.2">定义一个服务管理的统一接口方法。</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1083.68,231.5 1128.75,231.5 1128.75,606.5 1184.99,606.5 "/>
+    <polygon style="fill: #ffffff" points="1058.51,231.5 1072.51,226.7 1086.51,231.5 1072.51,236.3 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1058.51,231.5 1072.51,226.7 1086.51,231.5 1072.51,236.3 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1130.75" y="416"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1090.51" y="228.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="1180.99" y="603.5"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="525.781,762.5 849.802,762.5 849.802,606.5 1184.99,606.5 "/>
+    <polygon style="fill: #ffffff" points="500.609,762.5 514.609,757.7 528.609,762.5 514.609,767.3 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="500.609,762.5 514.609,757.7 528.609,762.5 514.609,767.3 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="851.802" y="681.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="532.609" y="759.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="1180.99" y="603.5"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="424.8,289.178 424.8,411.5 1379.65,411.5 1379.65,544.992 "/>
+    <polygon style="fill: #ffffff" points="424.8,264.007 429.6,278.007 424.8,292.007 420,278.007 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="424.8,264.007 429.6,278.007 424.8,292.007 420,278.007 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="902.225" y="408.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="435.8" y="276.007"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1383.65" y="540.992"></text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="60" y="99" width="200.4" height="72"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="60" y="99" width="200.4" height="72"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="160.2" y="115">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="160.2" y="135">CommandRole</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="160.2" y="150.2">这是一个命令角色类，主要用于各种命</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="160.2" y="164.2">令的具体实现的集散。</text>
+    <rect style="fill: #ffffff" x="60" y="171" width="200.4" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="60" y="171" width="200.4" height="8"/>
+    <rect style="fill: #ffffff" x="60" y="179" width="200.4" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="60" y="179" width="200.4" height="8"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="286.578,143 310.698,143 310.698,209.5 345.99,209.5 "/>
+    <polygon style="fill: #ffffff" points="261.406,143 275.406,138.2 289.406,143 275.406,147.8 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="261.406,143 275.406,138.2 289.406,143 275.406,147.8 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="312.698" y="173.25"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="293.406" y="140"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="341.99" y="206.5"></text>
+  </g>
+</svg>

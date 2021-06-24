@@ -1,0 +1,245 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-cn" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>介绍 &mdash; exia 1.0 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="设计" href="设计.html" />
+    <link rel="prev" title="Welcome to Exia’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> exia
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Exia:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="设计.html">设计</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">exia</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>介绍</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/介绍.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>介绍<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>Exia是一个算法全生命周期管理工具，主要包括了算法研究，算法工程化，算法部署，算法管理四大方面。</p>
+<p><strong>算法研究</strong>：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>算法实验：利用JupyterNotebook快速预研算法，实验结果通过MLFlow Tracking跟踪比较。</p></li>
+</ul>
+</div></blockquote>
+<p><strong>算法工程化</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>算法文档：算法设计文档使用Latex形成学术型文档，算法官方技术文档使用reStructureTEXT形成Pythonic文档。</p></li>
+<li><p>算法封装：基于Python,采用OOP编程方式，使用Pythonic的标准化封装。</p></li>
+<li><p>算法扩展：采用Swig技术对其他语言，如C,CPP，进行封装。</p></li>
+</ul>
+</div></blockquote>
+<p><strong>算法部署</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>算法库：主要作为算法服务的后台支持，包括动态算法库和静态算法库，静态算法库事一些可直接调用的算法，动态算法库事一些需要训练的算法</p></li>
+<li><p>算法服务：主要基于静态算法库Pypi（私有），封装各种标准规范的算法服务，包括算法直接调用，算法训练，算法模型调用等各类算法功能性服务，功能性方面包括服务发现，参数管理和服务启停。</p></li>
+</ul>
+</div></blockquote>
+<p><strong>算法管理</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>算法记录：主要提供在算法运行过程中日志记录功能，方便算法报错时快速定位问题</p></li>
+<li><p>算法监控：主要提供模型更新功能，形成算法闭环</p></li>
+<li><p>算法调度：主要用来组合各种算法服务，实现算法全流程自动化，提供在线推理服务</p></li>
+</ul>
+</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="设计.html" class="btn btn-neutral float-right" title="设计" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Exia’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 2020, shihua
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Algorithm Library Manage
++ 简介
+该模块提供算法管理功能，方便算法服务的封装及后端调取
++ 主要技术
+（1）命令模式
+（2）MongoDB
++ 安装
+```
+pip install -i http://10.3.110.71:8080 --trusted-host 10.3.110.71 ModelLibrary
+```

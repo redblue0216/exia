@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-cn" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>model_library_interface module &mdash; ModelLibrary 1.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="command_mode_realization module" href="command_mode_realization.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> ModelLibrary
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">code</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="assist_base.html">assist_base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_mode_base.html">command_mode_base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_mode_realization.html">command_mode_realization module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">model_library_interface module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">模块介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">功能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">类说明</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ModelLibrary</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">code</a> &raquo;</li>
+        
+      <li>model_library_interface module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/model_library_interface.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-model_library_interface">
+<span id="model-library-interface-module"></span><h1>model_library_interface module<a class="headerlink" href="#module-model_library_interface" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>模块介绍<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>这是一个模型库操作命令的具体实现类，主要实现模型库的一系列操作</p>
+</div>
+<div class="section" id="id2">
+<h2>功能<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p>主要技术：</p>
+<blockquote>
+<div><p>（1）静态方法</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>类说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt id="model_library_interface.ModelLibraryInterface">
+<em class="property">class </em><code class="sig-prename descclassname">model_library_interface.</code><code class="sig-name descname">ModelLibraryInterface</code><a class="headerlink" href="#model_library_interface.ModelLibraryInterface" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个模型库管理接口类，主要采用静态方法实现</p>
+</div></blockquote>
+<dl class="py method">
+<dt id="model_library_interface.ModelLibraryInterface.QueryModel">
+<em class="property">static </em><code class="sig-name descname">QueryModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#model_library_interface.ModelLibraryInterface.QueryModel" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个查询模型的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>model_name (str)：最新版本的模型名字</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="model_library_interface.ModelLibraryInterface.ReadModel">
+<em class="property">static </em><code class="sig-name descname">ReadModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#model_library_interface.ModelLibraryInterface.ReadModel" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个读模型的方法</p>
+</div></blockquote>
+<dl>
+<dt>参数：</dt><dd><p>user (str): 用户名
+passwd (str): 密码
+db (str): 数据库名称
+collection_name (str): 数据集名称
+mongodb_config_dict (str): mongodb连接配置参数</p>
+<p>mode (str)：</p>
+<p>（1）direct_operation—-可直接运行模式</p>
+<blockquote>
+<div><p>model_name （str): 模型名称</p>
+</div></blockquote>
+<p>（2）trained_model_remote—-需要训练模型的模式(远端模型库)</p>
+<blockquote>
+<div><p>mode_name (str): 模型名称
+mode_type (str): 模型类型
+local_path (str): 本地路径，主要指训练机器路径
+target_path (str): 模型库路径，主要指模型库存储地址，通过assist_base配置</p>
+</div></blockquote>
+<p>（3）trained_model_target—-需要训练模型的模式(目标模型库，适用于主程与模型库同在一台机器上的情况)</p>
+<blockquote>
+<div><p>mode_name (str): 模型名称
+mode_type (str): 模型类型
+local_path (str): 本地路径，主要指训练机器路径
+target_path (str): 模型库路径，主要指模型库存储地址，通过assist_base配置</p>
+</div></blockquote>
+</dd>
+<dt>返回：</dt><dd><p>writre_result (object): 执行写模型动作后的结果</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="model_library_interface.ModelLibraryInterface.WriteModel">
+<em class="property">static </em><code class="sig-name descname">WriteModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#model_library_interface.ModelLibraryInterface.WriteModel" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个写模型的方法</p>
+</div></blockquote>
+<dl>
+<dt>参数：</dt><dd><p>user (str): 用户名
+passwd (str): 密码
+db (str): 数据库名称
+collection_name (str): 数据集名称
+mongodb_config_dict (str): mongodb连接配置参数</p>
+<blockquote>
+<div><p>mode (str)：</p>
+<p>（1）direct_operation—-可直接运行模式</p>
+<p>model_instance (str): 模型实例
+model_name (str): 模型名称</p>
+<p>（2）trained_model—-需要训练模型的模式</p>
+<p>mode_name (str): 模型名称
+mode_type (str): 模型类型
+local_path (str): 本地路径，主要指训练机器路径
+target_path (str): 模型库路径，主要指模型库存储地址，通过assist_base配置</p>
+</div></blockquote>
+</dd>
+<dt>返回：</dt><dd><p>writre_result (str): 执行写模型动作后的结果</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="command_mode_realization.html" class="btn btn-neutral float-left" title="command_mode_realization module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 2020, shihua
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

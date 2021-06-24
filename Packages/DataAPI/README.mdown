@@ -1,0 +1,9 @@
+# Algorithm Library Manage
++ 简介
+该模块提供数据API功能，方便算法调取数据。
++ 主要技术
+（1）构建模式
+（2）组合模式
++ 安装
+```
+pip install -i http://10.3.110.71:8080 --trusted-host 10.3.110.71 DataAPI

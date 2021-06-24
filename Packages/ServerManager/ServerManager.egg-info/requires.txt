@@ -1,0 +1,4 @@
+paramiko
+python-consul
+flask
+minio

@@ -1,0 +1,9 @@
+# Algorithm Log
++ 简介
+该模块提供算法记录功能，对代码没有侵入。
++ 主要技术
+（1）装饰器模式
++ 安装
+```
+pip install -i http://10.3.110.71:8080 --trusted-host 10.3.110.71 LogDecoratorEK
+```

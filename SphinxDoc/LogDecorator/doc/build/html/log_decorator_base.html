@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-cn" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>log_decorator_base module &mdash; LogDecorator 1.0 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="assist_base module" href="assist_base.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> LogDecorator
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">code</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="assist_base.html">assist_base module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">log_decorator_base module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">模块介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">使用示例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">类说明</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">LogDecorator</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">code</a> &raquo;</li>
+        
+      <li>log_decorator_base module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/log_decorator_base.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-log_decorator_base">
+<span id="log-decorator-base-module"></span><h1>log_decorator_base module<a class="headerlink" href="#module-log_decorator_base" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>模块介绍<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>这是一个算法运行日志记录的辅助包，主要采用装饰器模式为算法运行函数添加日志记录功能</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>（1）装饰器模式</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）不侵入代码，算法运行需要整合成一个函数</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）日志记录功能</p>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2>使用示例<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>&gt;&gt;&gt;from LogDecorator.log_decorator_base import *</p>
+<p>&gt;&gt;&gt;AlgorithmLog_Decorator = AlgorithmLog_Decorator()</p>
+<p>&gt;&gt;&gt;&#64;AlgorithmLog_Decorator.extend</p>
+<p>&gt;&gt;&gt;def run_model(a,b):</p>
+<p>—    c = a + b</p>
+<p>—    print(“&gt;&gt;&gt;&gt;&gt;&gt;”,c)</p>
+<p>—    return c</p>
+<p>&gt;&gt;&gt;if __name__ == ‘__main__’:</p>
+<p>—    c = run_model(1,2)</p>
+<p>&gt;&gt;&gt;run_model.log(name=’log_level_Test’,logtext=’Add log with consul!’,host = ‘10.2.12.248’,port = 8500)</p>
+</div>
+<div class="section" id="id3">
+<h2>类说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt id="log_decorator_base.AlgorithmLog_Base">
+<em class="property">class </em><code class="sig-prename descclassname">log_decorator_base.</code><code class="sig-name descname">AlgorithmLog_Base</code><a class="headerlink" href="#log_decorator_base.AlgorithmLog_Base" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个算法日志基础类</p>
+<p>1.日志记录等级包括：</p>
+<blockquote>
+<div><p>(1)DEBUG</p>
+<p>(2)INFO</p>
+<p>(3)WARNING</p>
+<p>(4)ERROR</p>
+<p>(5)CRITICAL</p>
+</div></blockquote>
+</div></blockquote>
+<dl class="simple">
+<dt>属性方法:</dt><dd><p>__call__: 定义一个直接运行函数的魔法方法</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="log_decorator_base.AlgorithmLog_Base.log">
+<code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">logtext</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#log_decorator_base.AlgorithmLog_Base.log" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个算法记录的附件功能函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数:</dt><dd><p>name (str): 算法记录名称
+logtext (str)：算法记录内容
+host (str)：参数管理服务器的host
+port (int)：参数管理服务器的端口
+log_config_dict (str)：参数管理服务器Elasticsearch配置参数</p>
+</dd>
+<dt>返回:</dt><dd><p>返回 (object)：无返回，直接形成日志文件和提交日志信息到Elasticsearch</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="log_decorator_base.AlgorithmLog_Decorator">
+<em class="property">class </em><code class="sig-prename descclassname">log_decorator_base.</code><code class="sig-name descname">AlgorithmLog_Decorator</code><a class="headerlink" href="#log_decorator_base.AlgorithmLog_Decorator" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个算法记录装饰器类</p>
+<p>主要功能：</p>
+<p>1.记录算法的运行流程，并将运行状态等信息形成日志，输出到Elasticsearch</p>
+</div></blockquote>
+<dl class="py method">
+<dt id="log_decorator_base.AlgorithmLog_Decorator.extend">
+<code class="sig-name descname">extend</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">decorated</span></em><span class="sig-paren">)</span><a class="headerlink" href="#log_decorator_base.AlgorithmLog_Decorator.extend" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个提交装饰器函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数:</dt><dd><p>decorated (object)：作用参数，目标函数</p>
+</dd>
+<dt>返回:</dt><dd><p>返回 (object)：返回一个具有扩展功能的函数类对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="assist_base.html" class="btn btn-neutral float-left" title="assist_base module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 2020, shihua
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+# ServerManager
++ 简介
+该模块提供服务管理功能，包括参数管理，服务生成和对象获取
++ 主要技术
+（1）命令模式
+（2）Consul
+（3）Jinja2
+（4）SSH
+（5）Minio
++ 安装
+```
+pip install -i http://10.3.110.71:8080 --trusted-host 10.3.110.71 ServerManager
+```

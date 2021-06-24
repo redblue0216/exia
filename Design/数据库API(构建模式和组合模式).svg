@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="68cm" height="53cm" viewBox="52 37 1357 1045" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="53" y="172" width="318" height="86"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="53" y="172" width="318" height="86"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="212" y="188">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="212" y="208">BuilderManager</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="223.2">这是一个构建模式中的管理类，充当指</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="237.2">挥者的角色，目前主要包含ETL和数</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="251.2">据库接入两个功能。</text>
+    <rect style="fill: #ffffff" x="53" y="258" width="318" height="78"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="53" y="258" width="318" height="78"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="56" y="272">+__DataBaseConnect: __init__ = object</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="56" y="287.2">ETLBuilder对象</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="56" y="309">+__StoreProcedureCall: __init__ = object</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="56" y="324.2">DBBuilder</text>
+    <rect style="fill: #ffffff" x="53" y="336" width="318" height="106"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="53" y="336" width="318" height="106"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="56" y="350">+buildDataBaseConnect(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="56" y="365.2">定义一个构建ETL产品的方法，需要</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="56" y="379.2">构建者类</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="56" y="401">+buildStoreProcedureCall(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="56" y="416.2">定义一个构建DB产品的方法，需要构</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="56" y="430.2">建者类</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="444" y="124" width="248.7" height="86"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="444" y="124" width="248.7" height="86"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="568.35" y="140">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="568.35" y="160">DataBaseConnectBuilder</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="568.35" y="175.2">这是一个构建模式中的构建者类的定制</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="568.35" y="189.2">化类，主要提供ETL功能，需要组件</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="568.35" y="203.2">模式的支持。</text>
+    <rect style="fill: #ffffff" x="444" y="210" width="248.7" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="444" y="210" width="248.7" height="8"/>
+    <rect style="fill: #ffffff" x="444" y="218" width="248.7" height="55"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="444" y="218" width="248.7" height="55"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="447" y="232">+buildDataBaseConnect(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="447" y="247.2">定义一个根据业务需要构建组合功能件</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="447" y="261.2">的函数，主要依赖于组合模式</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="438" y="359" width="271.8" height="86"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="438" y="359" width="271.8" height="86"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="573.9" y="375">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="573.9" y="395">StoreProcedureCallBuilder</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="573.9" y="410.2">这是一个构建模式中的构建者类的定制</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="573.9" y="424.2">化类，主要提供DB功能，需要组件模</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="573.9" y="438.2">式的支持。</text>
+    <rect style="fill: #ffffff" x="438" y="445" width="271.8" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="438" y="445" width="271.8" height="8"/>
+    <rect style="fill: #ffffff" x="438" y="453" width="271.8" height="55"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="438" y="453" width="271.8" height="55"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="441" y="467">+buildStoreProcedureCall(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="441" y="482.2">定义一个根据业务需要构建组合功能件</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="441" y="496.2">的函数，主要依赖于组合模式</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="752" y="126" width="186.85" height="72"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="752" y="126" width="186.85" height="72"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="845.425" y="142">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="845.425" y="162">BaseBuilder</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="845.425" y="177.2">这是一个构建者抽象类，继承自ABC</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="845.425" y="191.2">Meta元类</text>
+    <rect style="fill: #ffffff" x="752" y="198" width="186.85" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="752" y="198" width="186.85" height="8"/>
+    <rect style="fill: #ffffff" x="752" y="206" width="186.85" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="752" y="206" width="186.85" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1043" y="129" width="122.5" height="58"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1043" y="129" width="122.5" height="58"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1104.25" y="145">&lt;&lt;metaclass&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1104.25" y="165">ABCMeta</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1104.25" y="180.2">这是一个Python元基类</text>
+    <rect style="fill: #ffffff" x="1043" y="187" width="122.5" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1043" y="187" width="122.5" height="8"/>
+    <rect style="fill: #ffffff" x="1043" y="195" width="122.5" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1043" y="195" width="122.5" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="748" y="480" width="217.9" height="72"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="748" y="480" width="217.9" height="72"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="856.95" y="496">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="856.95" y="516">Component</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="856.95" y="531.2">这是一个组合模式中组件类，主要用于</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="856.95" y="545.2">将功能函数对象化为类，方便工程化。</text>
+    <rect style="fill: #ffffff" x="748" y="552" width="217.9" height="41"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="748" y="552" width="217.9" height="41"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="751" y="566">+_name: __init__ = name</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="751" y="581.2">组件名称</text>
+    <rect style="fill: #ffffff" x="748" y="593" width="217.9" height="129"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="748" y="593" width="217.9" height="129"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="751" y="607">+getName(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="751" y="622.2">定义一个获取组件类方法的函数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="751" y="644">+isComposite(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="751" y="659.2">定义一个判断是组件还是组合配件的函</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="751" y="673.2">数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="751" y="695">+feature(): @abstractmethod</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="751" y="710.2">定义一个实现组件具体功能的函数</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1074" y="464" width="333.4" height="86"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1074" y="464" width="333.4" height="86"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1240.7" y="480">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1240.7" y="500">Composite</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1240.7" y="515.2">这是一个组合模式中组合配件的类，主</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1240.7" y="529.2">要用于将各个配件组合起来，形成一个</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1240.7" y="543.2">套完整功能。</text>
+    <rect style="fill: #ffffff" x="1074" y="550" width="333.4" height="78"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1074" y="550" width="333.4" height="78"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1077" y="564">+super: __init__ = super()</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1077" y="579.2">继承组件属性</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1077" y="601">+_components: __init__ = list</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1077" y="616.2">组件列表，数据结构列表</text>
+    <rect style="fill: #ffffff" x="1074" y="628" width="333.4" height="180"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1074" y="628" width="333.4" height="180"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1077" y="642">+addComponent(component:object): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1077" y="657.2">定义一个添加组件的函数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1077" y="679">+removeComponent(component:object): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1077" y="694.2">定义一个删除组件的函数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1077" y="716">+isComposite(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1077" y="731.2">定义一个判断是组件还是组合配件类的</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1077" y="745.2">函数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1077" y="767">+feature(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1077" y="782.2">定义一个循环或者选择性运行所有组件</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1077" y="796.2">的功能的函数</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="985.143,601 1027.95,601 1027.95,636 1072.99,636 "/>
+    <polygon style="fill: #ffffff" points="985.143,593 969.143,601 985.143,609 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="985.143,593 969.143,601 985.143,609 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1023.76,166 996.45,166 996.45,601 966.907,601 "/>
+    <polygon style="fill: #ffffff" points="1023.76,174 1039.76,166 1023.76,158 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1023.76,174 1039.76,166 1023.76,158 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1023.76,166 982.924,166 982.924,170 939.856,170 "/>
+    <polygon style="fill: #ffffff" points="1023.76,174 1039.76,166 1023.76,158 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1023.76,174 1039.76,166 1023.76,158 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="732.762,170 711,170 711,433.5 710.808,433.5 "/>
+    <polygon style="fill: #ffffff" points="732.762,178 748.762,170 732.762,162 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="732.762,178 748.762,170 732.762,162 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="732.758,170 714.351,170 714.351,198.5 693.708,198.5 "/>
+    <polygon style="fill: #ffffff" points="732.758,178 748.758,170 732.758,162 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="732.758,178 748.758,170 732.758,162 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="397.181,307 411.501,307 411.501,433.5 436.992,433.5 "/>
+    <polygon style="fill: #ffffff" points="372.01,307 386.01,302.2 400.01,307 386.01,311.8 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="372.01,307 386.01,302.2 400.01,307 386.01,311.8 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.501" y="367.25"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="404.01" y="304"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="432.992" y="430.5"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="397.181,307 414.501,307 414.501,198.5 442.992,198.5 "/>
+    <polygon style="fill: #ffffff" points="372.01,307 386.01,302.2 400.01,307 386.01,311.8 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="372.01,307 386.01,302.2 400.01,307 386.01,311.8 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="416.501" y="249.75"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="404.01" y="304"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="438.992" y="195.5"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="718.879,198.5 727.35,198.5 727.35,601 746.993,601 "/>
+    <polygon style="fill: #ffffff" points="693.708,198.5 707.708,193.7 721.708,198.5 707.708,203.3 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="693.708,198.5 707.708,193.7 721.708,198.5 707.708,203.3 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="729.35" y="396.75"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="725.708" y="195.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="742.993" y="598"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="568.35,97.843 568.35,52 1240.7,52 1240.7,463.017 "/>
+    <polygon style="fill: #ffffff" points="568.35,123.015 563.55,109.015 568.35,95.0146 573.15,109.015 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="568.35,123.015 563.55,109.015 568.35,95.0146 573.15,109.015 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="904.525" y="49"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="579.35" y="119.015"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1244.7" y="459.017"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="735.98,433.5 735.901,433.5 735.901,601 746.993,601 "/>
+    <polygon style="fill: #ffffff" points="710.808,433.5 724.808,428.7 738.808,433.5 724.808,438.3 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="710.808,433.5 724.808,428.7 738.808,433.5 724.808,438.3 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="737.901" y="514.25"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="742.808" y="430.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="742.993" y="598"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="735.973,433.5 1040,433.5 1040,636 1072.99,636 "/>
+    <polygon style="fill: #ffffff" points="710.801,433.5 724.801,428.7 738.801,433.5 724.801,438.3 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="710.801,433.5 724.801,428.7 738.801,433.5 724.801,438.3 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1042" y="531.75"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="742.801" y="430.5"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="1068.99" y="633"></text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="109" y="625.75" width="402.7" height="86"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="109" y="625.75" width="402.7" height="86"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="310.35" y="641.75">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="310.35" y="661.75">DataBaseAPI_base</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="310.35" y="676.95">这是一个数据库API基础操作类，利</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="310.35" y="690.95">用构建者模式和组合模式创造的几个功</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="310.35" y="704.95">能组件实现一系列的数据库的操作</text>
+    <rect style="fill: #ffffff" x="109" y="711.75" width="402.7" height="240"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="109" y="711.75" width="402.7" height="240"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="112" y="725.75">+user: __init__ = str</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="740.95">用户名</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="112" y="762.75">+passwd: __init__ = str</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="777.95">密码</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="112" y="799.75">+Fixed_DataBaseConnect_config_dict: __init__ = dict</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="814.95">从配置文件中引入</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="112" y="836.75">+DataBaseConnect_config_dict: __init__ = dict</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="851.95">由固定的配置信息和动态信息组合而成</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="112" y="873.75">+BuildManger: __init__ = object</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="888.95">引入构建者与组合模式的数据库操作类</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="902.95">，进行一系列操作</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="112" y="924.75">+DBAPI: __init__ = class_method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="939.95">引用初始化数据库的权限方法</text>
+    <rect style="fill: #ffffff" x="109" y="951.75" width="402.7" height="129"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="109" y="951.75" width="402.7" height="129"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="112" y="965.75">+authority(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="980.95">定义一个创建数据连接和游标的函数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="112" y="1002.75">+exit(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="1017.95">定义一个退出的函数</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="112" y="1039.75">+query(): method</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="1054.95">定义一个查询的函数，主要通过调用存</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="1068.95">储过程实现数据的查询</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="212,461.244 212,541.876 310.35,541.876 310.35,624.743 "/>
+    <polygon style="fill: #ffffff" points="220,461.244 212,445.244 204,461.244 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="220,461.244 212,445.244 204,461.244 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="633" y="802.75" width="183.85" height="86"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="633" y="802.75" width="183.85" height="86"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="724.925" y="818.75">&lt;&lt;class&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="724.925" y="838.75">DataBaseAPI</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="724.925" y="853.95">这是一个数据服务API的具体封装类</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="724.925" y="867.95">，继承自DataBaseAPI_b</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="724.925" y="881.95">ase</text>
+    <rect style="fill: #ffffff" x="633" y="888.75" width="183.85" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="633" y="888.75" width="183.85" height="8"/>
+    <rect style="fill: #ffffff" x="633" y="896.75" width="183.85" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="633" y="896.75" width="183.85" height="8"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="530.942,853.25 580.35,853.25 580.35,853.75 631.994,853.75 "/>
+    <polygon style="fill: #ffffff" points="530.942,845.25 514.942,853.25 530.942,861.25 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="530.942,845.25 514.942,853.25 530.942,861.25 "/>
+  </g>
+</svg>

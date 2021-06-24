@@ -1,0 +1,317 @@
+# ExiaAlgorithmManager
+## 介绍
+Exia是一个算法全生命周期管理工具，主要包括了算法研究，算法工程化，算法部署，算法管理四大方面。
+
++ **算法研究**：
+
+	（1）算法实验：利用JupyterNotebook快速预研算法，实验结果通过MLFlow Tracking跟踪比较。
+
++ **算法工程化**
+
+	（1）算法文档：算法设计文档使用Latex形成学术型文档，算法官方技术文档使用reStructureTEXT形成Pythonic文档。
+
+	（2）算法封装：基于Python,采用OOP编程方式，使用Pythonic的标准化封装。
+	
+	（3）算法扩展：采用Swig技术对其他语言，如C,CPP，进行封装。
+
++ **算法部署**
+
+	（1）算法库：主要作为算法服务的后台支持，包括动态算法库和静态算法库，静态算法库事一些可直接调用的算法，动态算法库事一些需要训练的算法
+
+	（2）算法服务：主要基于静态算法库Pypi（私有），封装各种标准规范的算法服务，包括算法直接调用，算法训练，算法模型调用等各类算法功能性服务，功能性方面包括服务发现，参数管理和服务启停。
+
++ **算法管理**
+
+	（1）算法记录：主要提供在算法运行过程中日志记录功能，方便算法报错时快速定位问题
+
+	（2）算法监控：主要提供模型更新功能，形成算法闭环
+
+	（3）算法调度：主要用来组合各种算法服务，实现算法全流程自动化，提供在线推理服务
+
+
+
+## 安装
++ Exia采用Python开发，得益于Python良好的社区环境，安装支持Pythonic风格的各种管理器。
+```
+pip install -i http://10.3.110.71:8080 --trusted-host 10.3.110.71 AlgorithmManager
+```
+
+
+
+## 快速指南
++ Exia的动态插件功能可运行时直接引入组件模块，无须重新编译，组件模块配置灵活，具有较强的扩展性。具体使用步骤如下：
+
+	（1）实例化策略管理器和对象池：对象池创建提供基础套餐和空对象池两种方案，基础方案需要初始化数据库配置参数
+
+	（2）在With环境中使用对象池，对象池支持的操作有：
+
+		（a）从对象池中借用对象
+
+		（b）查看对象支持的主要使用方法
+
+		（c）根据主要使用方法调用具体方法（根据具体包的设计不同而定）
+
+		（d）返回对象
+
+		（e）清空对象池（如果不适用With环境或需要清空操作，可使用此方法）
+
+		（f）获取对象池
+
++ 代码示例：
+
+
+```Python
+	### 引入代码包
+	from AlgorithmManager.StrategyInterface.Strategy import * 
+
+
+
+	### 实例化策略管理器和对象池
+	StrategyContext = StrategyContext()
+	ObjectPool = ObjectPool('test_pool')
+
+
+
+	### 使用基础套餐
+	ObjectPool = StrategyContext.interface(strategy = StrategyObjectPoolBase(ObjectPool = ObjectPool),
+	                                       DataAPI_user = 'root',
+	                                       DataAPI_passwd = '123456',
+	                                       DataAPI_host = '10.2.12.248',
+	                                       DataAPI_port = 3306,
+	                                       DataAPI_db = 'test',
+	                                       DataAPI_charset = 'utf8')
+
+
+
+	### 在With环境中使用对象池
+	with ObjectPool as ObjectPool:
+
+
+
+	    ### 从对象池中借用对象
+	    ShowInfo = ObjectPool.borrowObject('ShowInfo')
+	    ModelMonitoring = ObjectPool.borrowObject('ModelMonitoring') 
+	    DataAPI = ObjectPool.borrowObject('DataAPI')
+	    LogDecoratorEK = ObjectPool.borrowObject('LogDecoratorEK')
+	    ModelLibrary = ObjectPool.borrowObject('ModelLibrary')
+	    ServerManager = ObjectPool.borrowObject('ServerManager')
+
+
+
+	    ### 使用对象
+	    ShowInfo.ShowInfo(ObjectPool,'ModelMonitoring')
+	    ShowInfo.ShowInfo(ObjectPool,'DataAPI')
+	    ShowInfo.ShowInfo(ObjectPool,'LogDecoratorEK')
+	    ShowInfo.ShowInfo(ObjectPool,'ModelLibrary')
+	    ShowInfo.ShowInfo(ObjectPool,'ServerManager')
+
+
+	    ## ModelMonitoring
+	    ModelMonitoring.setIndex(0.1)
+	    print(ModelMonitoring.state)
+
+
+	    ## DataAPI
+
+	    # 调取存储过程
+	    weight = 110
+	    age = 29
+	    InputParameters_dict = {
+	    'args' : (weight,age),
+	    'procname' : 'getdata'
+	    }
+	    data = DataAPI.exec_stored_procedure(InputParameters_dict = InputParameters_dict)
+	    DataAPI.exit()
+	    print(DataAPI.DBAPI)
+	    print(data)
+
+
+	    ## LogDecoratorEK
+
+	    # 手动打日志
+	    @LogDecoratorEK.extend
+	    def run_model(a,b):
+	        c = a + b
+	        print(">>>>>>",c)
+	        return c
+	        c = run_model(1,2)
+	    run_model.log(name='log_level_Test',logtext='Add log with consul!PKG First!',host = '10.2.12.248',port = 8500)
+
+
+	    ## ModelLibrary
+	    def hahahe(name):
+	        print('Ha ha,{}'.format(name))
+	    def hello_world(name):
+	        print('Hello world,{}'.format(name))
+	    user = 'admin'
+	    passwd = '123456'
+	    db = 'test'
+	    collection_name = 'capped'
+	    mongodb_config_dict = {'host' : '10.2.12.248','port' : 27017}
+	    mode = 'trained_model_object_store'
+	    model_name = 'test_model'
+	    model_type = 'pkl'
+	    connect_info = '10.2.12.248:9000'
+	    access_key = 'minioadmin'
+	    secret_key = 'minioadmin'
+	    secure = False
+	    object_file = 'test_model.pkl'
+	    bucket = 'testdata'
+
+	    # 写入Pthon对象
+	    write_result = ModelLibrary.WriteModel(user = user,
+	                                            passwd = passwd,
+	                                            db = db,
+	                                            collection_name = collection_name,
+	                                            mongodb_config_dict = mongodb_config_dict,
+	                                            mode = 'direct_operation',
+	                                            model_name = 'hahahe',
+	                                            model_instance = hahahe)
+	    print(write_result)
+
+	    # 写入模型对象
+	    write_result = ModelLibrary.WriteModel(user = user,
+	                                            passwd = passwd,
+	                                            db =db,
+	                                            collection_name = collection_name,
+	                                            mongodb_config_dict = mongodb_config_dict,
+	                                            mode = mode,
+	                                            model_name = model_name,
+	                                            model_type = model_type,
+	                                            connect_info = connect_info,
+	                                            access_key = access_key,
+	                                            secret_key = secret_key,
+	                                            secure = secure,
+	                                            object_file = object_file,
+	                                            bucket = bucket)
+	    print(write_result)
+
+	    # 读取Python对象
+	    read_result = ModelLibrary.ReadModel(user = user,
+	                                        passwd = passwd,
+	                                        db =db,
+	                                        collection_name = collection_name,
+	                                        mongodb_config_dict = mongodb_config_dict,
+	                                        mode = 'direct_operation',
+	                                        model_name = 'hahahe')
+	    print(read_result)
+	    read_result('shihua')
+
+	    # 读取模型对象
+	    read_result = ModelLibrary.ReadModel(user = user,
+	                                        passwd = passwd,
+	                                        db =db,
+	                                        collection_name = collection_name,
+	                                        mongodb_config_dict = mongodb_config_dict,
+	                                        mode = mode,
+	                                        model_name = model_name,
+	                                        model_type = model_type,
+	                                        connect_info = connect_info,
+	                                        access_key = access_key,
+	                                        secret_key = secret_key,
+	                                        secure = secure,
+	                                        object_file = object_file,
+	                                        bucket = bucket)
+	    print(read_result)
+
+
+	    ## ServerManager
+	    log_config_dict = {
+	        'LOG_ENABLED' : True,
+	        'LOG_TO_CONSOLE' : True,
+	        'LOG_TO_FILE' : True,
+	        'LOG_TO_ES' : True,
+	        'LOG_PATH' : './runtime.log',
+	        'LOG_LEVEL' : 'INFO',
+	        'LOG_FORMAT' : '%(levelname)s - %(asctime)s - process: %(process)d - %(filename)s - %(name)s - %(lineno)d - %(module)s - %(message)s',
+	        'ELASTIC_SEARCH_HOST' : '10.2.12.248',
+	        'ELASTIC_SEARCH_PORT' : 9200,
+	        'ELASTIC_SEARCH_INDEX' : 'runtime',
+	        'APP_ENVIRONMENT' : 'dev'
+	    }	
+	    Fixed_DataBaseConnect_config_dict = {
+	        'host' : '10.2.12.248',
+	        'port' : 3306,
+	        'db' : 'test',
+	        'charset' : 'utf8',
+	    }
+
+	    # 写入参数
+	    tmp_value = ServerManager.InputParameter(host = "10.2.12.248",
+	                                                            port = 8500,
+	                                                            key = 'log_config_dict',
+	                                                            value = str(log_config_dict))                                   
+	    print("=============>",tmp_value)       
+
+	    # 读取参数                                             
+	    tmp_value = ServerManager.GetParameter(host = "10.2.12.248",
+	                                                            port = 8500,
+	                                                            key = 'log_config_dict')
+	    print("==========>",tmp_value)          
+
+	    # 根据模板生成文件                                           
+	    tmp_value = ServerManager.GenerateJinjia2(searchpath=r"D:\AEwork\algorithm_platform\Demo\airflow_dag",
+	                                                            template_name = 'test_dag',
+	                                                            parameter_dict = {'tmp_func':'TestTrain'},
+	                                                            output_filepath = 'tmp_testtest.proto')
+	    print("===============>",tmp_value)
+
+	    # 写入对象
+	    tmp_value = ServerManager.PutObject(connect_info = '10.2.12.248:9000',
+	                                                        access_key = 'minioadmin',
+	                                                        secret_key = 'minioadmin',
+	                                                        secure = False,
+	                                                        object_file = 'train_data.csv',
+	                                                        bucket = 'testdata')
+	    print("===============>",tmp_value)
+
+	    # 读取对象
+	    tmp_value = ServerManager.GetObject(connect_info = '10.2.12.248:9000',
+	                                                        access_key = 'minioadmin',
+	                                                        secret_key = 'minioadmin',
+	                                                        secure = False,
+	                                                        object_file = 'HS300.csv',
+	                                                        bucket = 'testdata')
+	    print("===============>",tmp_value)
+
+	    # 删除对象
+	    tmp_value = ServerManager.OSRemove(filepath = 'tmp_testtest.proto')
+	    print("===============>",tmp_value)
+
+	    # 远端操作
+	    SSH_host_dict = {
+	        'host' : '10.2.12.248',
+	        'port' : 22,
+	        'username' : 'shihua',
+	        'pwd' : 'ATTACK7121553rb1'
+	    }
+	    command = 'service mysql status'
+	    tmp_value = ServerManager.SSHRunCMD(SSH_host_dict = SSH_host_dict,
+	                                                        command = command)
+	    print("===============>",tmp_value)
+
+
+
+	    ### 返回对象
+	    ObjectPool.returnObject('ModelMonitoring')
+
+
+
+	    ### 清空对象池
+	    # ObjectPool.clear()
+
+
+
+	    ### 获取对象池
+	    ObjectPool_test = ObjectPool.getObjectPool()
+	    print(ObjectPool_test)
+	print("=========================================================================================")
+	ObjectPool_test = ObjectPool.getObjectPool()
+	print(ObjectPool_test)
+```
+
+
+
+
+
+

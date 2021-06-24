@@ -1,0 +1,13 @@
+# AlgorithmManager
++ 简介
+该模块是算法平台的框架模块，
++ 主要技术
+（1）对象池
+（2）DAG数据结构
+（3）描述符
+（4）命令模式
+（5）工厂模式
++ 安装
+```
+pip install -i http://10.3.110.71:8080 --trusted-host 10.3.110.71 AlgorithmManager
+```

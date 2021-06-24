@@ -1,0 +1,482 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-cn" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>快速指南 &mdash; exia 1.0 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="安装" href="安装.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> exia
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Exia:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="介绍.html">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="设计.html">设计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="安装.html">安装</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">快速指南</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">exia</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>快速指南</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/快速指南.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>快速指南<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>Exia的动态插件功能可运行时直接引入组件模块，无须重新编译，组件模块配置灵活，具有较强的扩展性。具体使用步骤如下：</p>
+<blockquote>
+<div><ul>
+<li><p>实例化策略管理器和对象池：对象池创建提供基础套餐和空对象池两种方案，基础方案需要初始化数据库配置参数</p></li>
+<li><p>在With环境中使用对象池，对象池支持的操作有：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>从对象池中借用对象</p></li>
+<li><p>查看对象支持的主要使用方法</p></li>
+<li><p>根据主要使用方法调用具体方法（根据具体包的设计不同而定）</p></li>
+<li><p>返回对象</p></li>
+<li><p>清空对象池（如果不适用With环境或需要清空操作，可使用此方法）</p></li>
+<li><p>获取对象池</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>代码示例：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">### 引入代码包</span>
+<span class="kn">from</span> <span class="nn">AlgorithmManager.StrategyInterface.Strategy</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+
+<span class="c1">### 实例化策略管理器和对象池</span>
+<span class="n">StrategyContext</span> <span class="o">=</span> <span class="n">StrategyContext</span><span class="p">()</span>
+<span class="n">ObjectPool</span> <span class="o">=</span> <span class="n">ObjectPool</span><span class="p">(</span><span class="s1">&#39;test_pool&#39;</span><span class="p">)</span>
+
+
+
+<span class="c1">### 使用基础套餐</span>
+<span class="n">ObjectPool</span> <span class="o">=</span> <span class="n">StrategyContext</span><span class="o">.</span><span class="n">interface</span><span class="p">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">StrategyObjectPoolBase</span><span class="p">(</span><span class="n">ObjectPool</span> <span class="o">=</span> <span class="n">ObjectPool</span><span class="p">),</span>
+                                       <span class="n">DataAPI_user</span> <span class="o">=</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span>
+                                       <span class="n">DataAPI_passwd</span> <span class="o">=</span> <span class="s1">&#39;123456&#39;</span><span class="p">,</span>
+                                       <span class="n">DataAPI_host</span> <span class="o">=</span> <span class="s1">&#39;10.2.12.248&#39;</span><span class="p">,</span>
+                                       <span class="n">DataAPI_port</span> <span class="o">=</span> <span class="mi">3306</span><span class="p">,</span>
+                                       <span class="n">DataAPI_db</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span>
+                                       <span class="n">DataAPI_charset</span> <span class="o">=</span> <span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+
+
+
+<span class="c1">### 在With环境中使用对象池</span>
+<span class="k">with</span> <span class="n">ObjectPool</span> <span class="k">as</span> <span class="n">ObjectPool</span><span class="p">:</span>
+
+
+
+    <span class="c1">### 从对象池中借用对象</span>
+    <span class="n">ShowInfo</span> <span class="o">=</span> <span class="n">ObjectPool</span><span class="o">.</span><span class="n">borrowObject</span><span class="p">(</span><span class="s1">&#39;ShowInfo&#39;</span><span class="p">)</span>
+    <span class="n">ModelMonitoring</span> <span class="o">=</span> <span class="n">ObjectPool</span><span class="o">.</span><span class="n">borrowObject</span><span class="p">(</span><span class="s1">&#39;ModelMonitoring&#39;</span><span class="p">)</span>
+    <span class="n">DataAPI</span> <span class="o">=</span> <span class="n">ObjectPool</span><span class="o">.</span><span class="n">borrowObject</span><span class="p">(</span><span class="s1">&#39;DataAPI&#39;</span><span class="p">)</span>
+    <span class="n">LogDecoratorEK</span> <span class="o">=</span> <span class="n">ObjectPool</span><span class="o">.</span><span class="n">borrowObject</span><span class="p">(</span><span class="s1">&#39;LogDecoratorEK&#39;</span><span class="p">)</span>
+    <span class="n">ModelLibrary</span> <span class="o">=</span> <span class="n">ObjectPool</span><span class="o">.</span><span class="n">borrowObject</span><span class="p">(</span><span class="s1">&#39;ModelLibrary&#39;</span><span class="p">)</span>
+    <span class="n">ServerManager</span> <span class="o">=</span> <span class="n">ObjectPool</span><span class="o">.</span><span class="n">borrowObject</span><span class="p">(</span><span class="s1">&#39;ServerManager&#39;</span><span class="p">)</span>
+
+
+
+    <span class="c1">### 使用对象</span>
+    <span class="n">ShowInfo</span><span class="o">.</span><span class="n">ShowInfo</span><span class="p">(</span><span class="n">ObjectPool</span><span class="p">,</span><span class="s1">&#39;ModelMonitoring&#39;</span><span class="p">)</span>
+    <span class="n">ShowInfo</span><span class="o">.</span><span class="n">ShowInfo</span><span class="p">(</span><span class="n">ObjectPool</span><span class="p">,</span><span class="s1">&#39;DataAPI&#39;</span><span class="p">)</span>
+    <span class="n">ShowInfo</span><span class="o">.</span><span class="n">ShowInfo</span><span class="p">(</span><span class="n">ObjectPool</span><span class="p">,</span><span class="s1">&#39;LogDecoratorEK&#39;</span><span class="p">)</span>
+    <span class="n">ShowInfo</span><span class="o">.</span><span class="n">ShowInfo</span><span class="p">(</span><span class="n">ObjectPool</span><span class="p">,</span><span class="s1">&#39;ModelLibrary&#39;</span><span class="p">)</span>
+    <span class="n">ShowInfo</span><span class="o">.</span><span class="n">ShowInfo</span><span class="p">(</span><span class="n">ObjectPool</span><span class="p">,</span><span class="s1">&#39;ServerManager&#39;</span><span class="p">)</span>
+
+
+    <span class="c1">## ModelMonitoring</span>
+    <span class="n">ModelMonitoring</span><span class="o">.</span><span class="n">setIndex</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">ModelMonitoring</span><span class="o">.</span><span class="n">state</span><span class="p">)</span>
+
+
+    <span class="c1">## DataAPI</span>
+
+    <span class="c1"># 调取存储过程</span>
+    <span class="n">weight</span> <span class="o">=</span> <span class="mi">110</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="mi">29</span>
+    <span class="n">InputParameters_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;args&#39;</span> <span class="p">:</span> <span class="p">(</span><span class="n">weight</span><span class="p">,</span><span class="n">age</span><span class="p">),</span>
+    <span class="s1">&#39;procname&#39;</span> <span class="p">:</span> <span class="s1">&#39;getdata&#39;</span>
+    <span class="p">}</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">DataAPI</span><span class="o">.</span><span class="n">exec_stored_procedure</span><span class="p">(</span><span class="n">InputParameters_dict</span> <span class="o">=</span> <span class="n">InputParameters_dict</span><span class="p">)</span>
+    <span class="n">DataAPI</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">DataAPI</span><span class="o">.</span><span class="n">DBAPI</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+
+    <span class="c1">## LogDecoratorEK</span>
+
+    <span class="c1"># 手动打日志</span>
+    <span class="nd">@LogDecoratorEK.extend</span>
+    <span class="k">def</span> <span class="nf">run_model</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&quot;</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">c</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">run_model</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">run_model</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;log_level_Test&#39;</span><span class="p">,</span><span class="n">logtext</span><span class="o">=</span><span class="s1">&#39;Add log with consul!PKG First!&#39;</span><span class="p">,</span><span class="n">host</span> <span class="o">=</span> <span class="s1">&#39;10.2.12.248&#39;</span><span class="p">,</span><span class="n">port</span> <span class="o">=</span> <span class="mi">8500</span><span class="p">)</span>
+
+
+    <span class="c1">## ModelLibrary</span>
+    <span class="k">def</span> <span class="nf">hahahe</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Ha ha,{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+    <span class="k">def</span> <span class="nf">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello world,{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="s1">&#39;admin&#39;</span>
+    <span class="n">passwd</span> <span class="o">=</span> <span class="s1">&#39;123456&#39;</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span>
+    <span class="n">collection_name</span> <span class="o">=</span> <span class="s1">&#39;capped&#39;</span>
+    <span class="n">mongodb_config_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;host&#39;</span> <span class="p">:</span> <span class="s1">&#39;10.2.12.248&#39;</span><span class="p">,</span><span class="s1">&#39;port&#39;</span> <span class="p">:</span> <span class="mi">27017</span><span class="p">}</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;trained_model_object_store&#39;</span>
+    <span class="n">model_name</span> <span class="o">=</span> <span class="s1">&#39;test_model&#39;</span>
+    <span class="n">model_type</span> <span class="o">=</span> <span class="s1">&#39;pkl&#39;</span>
+    <span class="n">connect_info</span> <span class="o">=</span> <span class="s1">&#39;10.2.12.248:9000&#39;</span>
+    <span class="n">access_key</span> <span class="o">=</span> <span class="s1">&#39;minioadmin&#39;</span>
+    <span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;minioadmin&#39;</span>
+    <span class="n">secure</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">object_file</span> <span class="o">=</span> <span class="s1">&#39;test_model.pkl&#39;</span>
+    <span class="n">bucket</span> <span class="o">=</span> <span class="s1">&#39;testdata&#39;</span>
+
+    <span class="c1"># 写入Pthon对象</span>
+    <span class="n">write_result</span> <span class="o">=</span> <span class="n">ModelLibrary</span><span class="o">.</span><span class="n">WriteModel</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="n">user</span><span class="p">,</span>
+                                            <span class="n">passwd</span> <span class="o">=</span> <span class="n">passwd</span><span class="p">,</span>
+                                            <span class="n">db</span> <span class="o">=</span> <span class="n">db</span><span class="p">,</span>
+                                            <span class="n">collection_name</span> <span class="o">=</span> <span class="n">collection_name</span><span class="p">,</span>
+                                            <span class="n">mongodb_config_dict</span> <span class="o">=</span> <span class="n">mongodb_config_dict</span><span class="p">,</span>
+                                            <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;direct_operation&#39;</span><span class="p">,</span>
+                                            <span class="n">model_name</span> <span class="o">=</span> <span class="s1">&#39;hahahe&#39;</span><span class="p">,</span>
+                                            <span class="n">model_instance</span> <span class="o">=</span> <span class="n">hahahe</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">write_result</span><span class="p">)</span>
+
+    <span class="c1"># 写入模型对象</span>
+    <span class="n">write_result</span> <span class="o">=</span> <span class="n">ModelLibrary</span><span class="o">.</span><span class="n">WriteModel</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="n">user</span><span class="p">,</span>
+                                            <span class="n">passwd</span> <span class="o">=</span> <span class="n">passwd</span><span class="p">,</span>
+                                            <span class="n">db</span> <span class="o">=</span><span class="n">db</span><span class="p">,</span>
+                                            <span class="n">collection_name</span> <span class="o">=</span> <span class="n">collection_name</span><span class="p">,</span>
+                                            <span class="n">mongodb_config_dict</span> <span class="o">=</span> <span class="n">mongodb_config_dict</span><span class="p">,</span>
+                                            <span class="n">mode</span> <span class="o">=</span> <span class="n">mode</span><span class="p">,</span>
+                                            <span class="n">model_name</span> <span class="o">=</span> <span class="n">model_name</span><span class="p">,</span>
+                                            <span class="n">model_type</span> <span class="o">=</span> <span class="n">model_type</span><span class="p">,</span>
+                                            <span class="n">connect_info</span> <span class="o">=</span> <span class="n">connect_info</span><span class="p">,</span>
+                                            <span class="n">access_key</span> <span class="o">=</span> <span class="n">access_key</span><span class="p">,</span>
+                                            <span class="n">secret_key</span> <span class="o">=</span> <span class="n">secret_key</span><span class="p">,</span>
+                                            <span class="n">secure</span> <span class="o">=</span> <span class="n">secure</span><span class="p">,</span>
+                                            <span class="n">object_file</span> <span class="o">=</span> <span class="n">object_file</span><span class="p">,</span>
+                                            <span class="n">bucket</span> <span class="o">=</span> <span class="n">bucket</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">write_result</span><span class="p">)</span>
+
+    <span class="c1"># 读取Python对象</span>
+    <span class="n">read_result</span> <span class="o">=</span> <span class="n">ModelLibrary</span><span class="o">.</span><span class="n">ReadModel</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="n">user</span><span class="p">,</span>
+                                        <span class="n">passwd</span> <span class="o">=</span> <span class="n">passwd</span><span class="p">,</span>
+                                        <span class="n">db</span> <span class="o">=</span><span class="n">db</span><span class="p">,</span>
+                                        <span class="n">collection_name</span> <span class="o">=</span> <span class="n">collection_name</span><span class="p">,</span>
+                                        <span class="n">mongodb_config_dict</span> <span class="o">=</span> <span class="n">mongodb_config_dict</span><span class="p">,</span>
+                                        <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;direct_operation&#39;</span><span class="p">,</span>
+                                        <span class="n">model_name</span> <span class="o">=</span> <span class="s1">&#39;hahahe&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">read_result</span><span class="p">)</span>
+    <span class="n">read_result</span><span class="p">(</span><span class="s1">&#39;shihua&#39;</span><span class="p">)</span>
+
+    <span class="c1"># 读取模型对象</span>
+    <span class="n">read_result</span> <span class="o">=</span> <span class="n">ModelLibrary</span><span class="o">.</span><span class="n">ReadModel</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="n">user</span><span class="p">,</span>
+                                        <span class="n">passwd</span> <span class="o">=</span> <span class="n">passwd</span><span class="p">,</span>
+                                        <span class="n">db</span> <span class="o">=</span><span class="n">db</span><span class="p">,</span>
+                                        <span class="n">collection_name</span> <span class="o">=</span> <span class="n">collection_name</span><span class="p">,</span>
+                                        <span class="n">mongodb_config_dict</span> <span class="o">=</span> <span class="n">mongodb_config_dict</span><span class="p">,</span>
+                                        <span class="n">mode</span> <span class="o">=</span> <span class="n">mode</span><span class="p">,</span>
+                                        <span class="n">model_name</span> <span class="o">=</span> <span class="n">model_name</span><span class="p">,</span>
+                                        <span class="n">model_type</span> <span class="o">=</span> <span class="n">model_type</span><span class="p">,</span>
+                                        <span class="n">connect_info</span> <span class="o">=</span> <span class="n">connect_info</span><span class="p">,</span>
+                                        <span class="n">access_key</span> <span class="o">=</span> <span class="n">access_key</span><span class="p">,</span>
+                                        <span class="n">secret_key</span> <span class="o">=</span> <span class="n">secret_key</span><span class="p">,</span>
+                                        <span class="n">secure</span> <span class="o">=</span> <span class="n">secure</span><span class="p">,</span>
+                                        <span class="n">object_file</span> <span class="o">=</span> <span class="n">object_file</span><span class="p">,</span>
+                                        <span class="n">bucket</span> <span class="o">=</span> <span class="n">bucket</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">read_result</span><span class="p">)</span>
+
+
+    <span class="c1">## ServerManager</span>
+    <span class="n">log_config_dict</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;LOG_ENABLED&#39;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="s1">&#39;LOG_TO_CONSOLE&#39;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="s1">&#39;LOG_TO_FILE&#39;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="s1">&#39;LOG_TO_ES&#39;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="s1">&#39;LOG_PATH&#39;</span> <span class="p">:</span> <span class="s1">&#39;./runtime.log&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LOG_LEVEL&#39;</span> <span class="p">:</span> <span class="s1">&#39;INFO&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LOG_FORMAT&#39;</span> <span class="p">:</span> <span class="s1">&#39;</span><span class="si">%(levelname)s</span><span class="s1"> - </span><span class="si">%(asctime)s</span><span class="s1"> - process: </span><span class="si">%(process)d</span><span class="s1"> - </span><span class="si">%(filename)s</span><span class="s1"> - </span><span class="si">%(name)s</span><span class="s1"> - </span><span class="si">%(lineno)d</span><span class="s1"> - </span><span class="si">%(module)s</span><span class="s1"> - </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;ELASTIC_SEARCH_HOST&#39;</span> <span class="p">:</span> <span class="s1">&#39;10.2.12.248&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;ELASTIC_SEARCH_PORT&#39;</span> <span class="p">:</span> <span class="mi">9200</span><span class="p">,</span>
+        <span class="s1">&#39;ELASTIC_SEARCH_INDEX&#39;</span> <span class="p">:</span> <span class="s1">&#39;runtime&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;APP_ENVIRONMENT&#39;</span> <span class="p">:</span> <span class="s1">&#39;dev&#39;</span>
+    <span class="p">}</span>
+    <span class="n">Fixed_DataBaseConnect_config_dict</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;host&#39;</span> <span class="p">:</span> <span class="s1">&#39;10.2.12.248&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;port&#39;</span> <span class="p">:</span> <span class="mi">3306</span><span class="p">,</span>
+        <span class="s1">&#39;db&#39;</span> <span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;charset&#39;</span> <span class="p">:</span> <span class="s1">&#39;utf8&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="c1"># 写入参数</span>
+    <span class="n">tmp_value</span> <span class="o">=</span> <span class="n">ServerManager</span><span class="o">.</span><span class="n">InputParameter</span><span class="p">(</span><span class="n">host</span> <span class="o">=</span> <span class="s2">&quot;10.2.12.248&quot;</span><span class="p">,</span>
+                                                            <span class="n">port</span> <span class="o">=</span> <span class="mi">8500</span><span class="p">,</span>
+                                                            <span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;log_config_dict&#39;</span><span class="p">,</span>
+                                                            <span class="n">value</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">log_config_dict</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;=============&gt;&quot;</span><span class="p">,</span><span class="n">tmp_value</span><span class="p">)</span>
+
+    <span class="c1"># 读取参数</span>
+    <span class="n">tmp_value</span> <span class="o">=</span> <span class="n">ServerManager</span><span class="o">.</span><span class="n">GetParameter</span><span class="p">(</span><span class="n">host</span> <span class="o">=</span> <span class="s2">&quot;10.2.12.248&quot;</span><span class="p">,</span>
+                                                            <span class="n">port</span> <span class="o">=</span> <span class="mi">8500</span><span class="p">,</span>
+                                                            <span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;log_config_dict&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;==========&gt;&quot;</span><span class="p">,</span><span class="n">tmp_value</span><span class="p">)</span>
+
+    <span class="c1"># 根据模板生成文件</span>
+    <span class="n">tmp_value</span> <span class="o">=</span> <span class="n">ServerManager</span><span class="o">.</span><span class="n">GenerateJinjia2</span><span class="p">(</span><span class="n">searchpath</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;D:\AEwork\algorithm_platform\Demo\airflow_dag&quot;</span><span class="p">,</span>
+                                                            <span class="n">template_name</span> <span class="o">=</span> <span class="s1">&#39;test_dag&#39;</span><span class="p">,</span>
+                                                            <span class="n">parameter_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;tmp_func&#39;</span><span class="p">:</span><span class="s1">&#39;TestTrain&#39;</span><span class="p">},</span>
+                                                            <span class="n">output_filepath</span> <span class="o">=</span> <span class="s1">&#39;tmp_testtest.proto&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;===============&gt;&quot;</span><span class="p">,</span><span class="n">tmp_value</span><span class="p">)</span>
+
+    <span class="c1"># 写入对象</span>
+    <span class="n">tmp_value</span> <span class="o">=</span> <span class="n">ServerManager</span><span class="o">.</span><span class="n">PutObject</span><span class="p">(</span><span class="n">connect_info</span> <span class="o">=</span> <span class="s1">&#39;10.2.12.248:9000&#39;</span><span class="p">,</span>
+                                                        <span class="n">access_key</span> <span class="o">=</span> <span class="s1">&#39;minioadmin&#39;</span><span class="p">,</span>
+                                                        <span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;minioadmin&#39;</span><span class="p">,</span>
+                                                        <span class="n">secure</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+                                                        <span class="n">object_file</span> <span class="o">=</span> <span class="s1">&#39;train_data.csv&#39;</span><span class="p">,</span>
+                                                        <span class="n">bucket</span> <span class="o">=</span> <span class="s1">&#39;testdata&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;===============&gt;&quot;</span><span class="p">,</span><span class="n">tmp_value</span><span class="p">)</span>
+
+    <span class="c1"># 读取对象</span>
+    <span class="n">tmp_value</span> <span class="o">=</span> <span class="n">ServerManager</span><span class="o">.</span><span class="n">GetObject</span><span class="p">(</span><span class="n">connect_info</span> <span class="o">=</span> <span class="s1">&#39;10.2.12.248:9000&#39;</span><span class="p">,</span>
+                                                        <span class="n">access_key</span> <span class="o">=</span> <span class="s1">&#39;minioadmin&#39;</span><span class="p">,</span>
+                                                        <span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;minioadmin&#39;</span><span class="p">,</span>
+                                                        <span class="n">secure</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+                                                        <span class="n">object_file</span> <span class="o">=</span> <span class="s1">&#39;HS300.csv&#39;</span><span class="p">,</span>
+                                                        <span class="n">bucket</span> <span class="o">=</span> <span class="s1">&#39;testdata&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;===============&gt;&quot;</span><span class="p">,</span><span class="n">tmp_value</span><span class="p">)</span>
+
+    <span class="c1"># 删除对象</span>
+    <span class="n">tmp_value</span> <span class="o">=</span> <span class="n">ServerManager</span><span class="o">.</span><span class="n">OSRemove</span><span class="p">(</span><span class="n">filepath</span> <span class="o">=</span> <span class="s1">&#39;tmp_testtest.proto&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;===============&gt;&quot;</span><span class="p">,</span><span class="n">tmp_value</span><span class="p">)</span>
+
+    <span class="c1"># 远端操作</span>
+    <span class="n">SSH_host_dict</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;host&#39;</span> <span class="p">:</span> <span class="s1">&#39;10.2.12.248&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;port&#39;</span> <span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+        <span class="s1">&#39;username&#39;</span> <span class="p">:</span> <span class="s1">&#39;shihua&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;pwd&#39;</span> <span class="p">:</span> <span class="s1">&#39;ATTACK7121553rb1&#39;</span>
+    <span class="p">}</span>
+    <span class="n">command</span> <span class="o">=</span> <span class="s1">&#39;service mysql status&#39;</span>
+    <span class="n">tmp_value</span> <span class="o">=</span> <span class="n">ServerManager</span><span class="o">.</span><span class="n">SSHRunCMD</span><span class="p">(</span><span class="n">SSH_host_dict</span> <span class="o">=</span> <span class="n">SSH_host_dict</span><span class="p">,</span>
+                                                        <span class="n">command</span> <span class="o">=</span> <span class="n">command</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;===============&gt;&quot;</span><span class="p">,</span><span class="n">tmp_value</span><span class="p">)</span>
+
+
+
+    <span class="c1">### 返回对象</span>
+    <span class="n">ObjectPool</span><span class="o">.</span><span class="n">returnObject</span><span class="p">(</span><span class="s1">&#39;ModelMonitoring&#39;</span><span class="p">)</span>
+
+
+
+    <span class="c1">### 清空对象池</span>
+    <span class="c1"># ObjectPool.clear()</span>
+
+
+
+    <span class="c1">### 获取对象池</span>
+    <span class="n">ObjectPool_test</span> <span class="o">=</span> <span class="n">ObjectPool</span><span class="o">.</span><span class="n">getObjectPool</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">ObjectPool_test</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;=========================================================================================&quot;</span><span class="p">)</span>
+<span class="n">ObjectPool_test</span> <span class="o">=</span> <span class="n">ObjectPool</span><span class="o">.</span><span class="n">getObjectPool</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ObjectPool_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="安装.html" class="btn btn-neutral float-left" title="安装" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 2020, shihua
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
